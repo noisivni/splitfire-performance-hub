@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ============================= */
-/* Tailwind Directives */
-/* ============================= */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* ============================= */
-/* Splitfire Auto Repairs - Dark Industrial Racing Theme */
-/* ============================= */
 @layer base {
   :root {
-    /* Core dark palette */
+  
     --background: 220 15% 5%;
     --foreground: 0 0% 98%;
 
