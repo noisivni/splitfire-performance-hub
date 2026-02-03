@@ -11,14 +11,9 @@ import datsunWhelie from '@/assets/datsun-wheelie.jpg';
 import engineBuild from '@/assets/engine-build.jpg';
 
 const galleryImages = [
-  { src: civicFlames, alt: 'Civic shooting flames at night', category: 'Racing' },
-  { src: engineGreen, alt: 'Green Honda engine bay with turbo', category: 'Builds' },
   { src: r32Skyline, alt: 'R32 Skyline GTR in the shop', category: 'Builds' },
-  { src: datsunWhelie, alt: 'Datsun 240Z doing a wheelie', category: 'Racing' },
   { src: engineRed, alt: 'Red valve cover Honda engine', category: 'Builds' },
-  { src: raceDay, alt: 'Race day at the track', category: 'Racing' },
-  { src: civicRaceway, alt: 'Civic at the raceway', category: 'Racing' },
-  { src: engineBuild, alt: 'Engine build in progress', category: 'Builds' },
+  { src: engineGreen, alt: 'Green Honda engine bay with turbo', category: 'Builds' },
 ];
 
 const GallerySection = () => {
