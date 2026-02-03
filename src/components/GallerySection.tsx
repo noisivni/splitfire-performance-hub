@@ -36,29 +36,27 @@ const GallerySection = () => {
           </p>
         </div>
 
-        {/* Masonry Grid */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+        {/* Gallery Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="break-inside-avoid group cursor-pointer"
+              className="group cursor-pointer"
               onClick={() => setSelectedImage(image)}
             >
               <div className="relative rounded-lg overflow-hidden border border-border hover:border-racing-blue/50 transition-all duration-300">
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="text-center">
-                    <span className="text-xs font-display font-medium text-racing-blue uppercase tracking-widest">
-                      {image.category}
-                    </span>
-                    <p className="text-sm text-foreground mt-1">{image.alt}</p>
-                  </div>
-                </div>
+              </div>
+              {/* Title Below */}
+              <div className="mt-4 text-center">
+                <span className="text-xs font-display font-medium text-racing-blue uppercase tracking-widest">
+                  {image.category}
+                </span>
+                <p className="text-lg font-medium text-foreground mt-1">{image.alt}</p>
               </div>
             </div>
           ))}
