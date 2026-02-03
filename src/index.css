@@ -1,6 +1,17 @@
+/* ============================= */
+/* Tailwind Directives */
+/* ============================= */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ============================= */
+/* Splitfire Auto Repairs - Dark Industrial Racing Theme */
+/* ============================= */
+
+/* ----------------------------- */
+/* Base Layer: Root variables, body, headings */
+/* ----------------------------- */
 @layer base {
   :root {
     --background: 220 15% 5%;
