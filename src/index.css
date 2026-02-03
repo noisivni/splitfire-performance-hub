@@ -1,12 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
-
+/* ============================= */
+/* Tailwind Directives */
+/* ============================= */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ============================= */
+/* Splitfire Auto Repairs - Dark Industrial Racing Theme */
+/* ============================= */
+
+/* ----------------------------- */
+/* Base Layer: Root variables, body, headings */
+/* ----------------------------- */
 @layer base {
   :root {
-  
     --background: 220 15% 5%;
     --foreground: 0 0% 98%;
 
@@ -16,34 +23,21 @@
     --popover: 220 15% 8%;
     --popover-foreground: 0 0% 98%;
 
-    /* Racing Blue - Primary */
     --primary: 214 100% 50%;
     --primary-foreground: 0 0% 100%;
-
-    /* Metallic Silver - Secondary */
     --secondary: 220 10% 18%;
     --secondary-foreground: 0 0% 90%;
-
-    /* Muted surfaces */
     --muted: 220 10% 15%;
     --muted-foreground: 220 10% 60%;
-
-    /* Fire Orange - Accent */
     --accent: 16 100% 50%;
     --accent-foreground: 0 0% 100%;
-
-    /* Danger/Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-
-    /* Borders and inputs */
     --border: 220 15% 20%;
     --input: 220 15% 15%;
     --ring: 214 100% 50%;
-
     --radius: 0.5rem;
 
-    /* Custom Splitfire tokens */
     --racing-blue: 214 100% 50%;
     --racing-blue-glow: 214 100% 60%;
     --fire-orange: 16 100% 50%;
@@ -53,19 +47,16 @@
     --chrome: 220 10% 75%;
     --chrome-dark: 220 10% 45%;
 
-    /* Gradients */
     --gradient-racing: linear-gradient(135deg, hsl(var(--racing-blue)) 0%, hsl(var(--racing-blue-glow)) 100%);
     --gradient-fire: linear-gradient(135deg, hsl(var(--fire-orange)) 0%, hsl(var(--fire-orange-glow)) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(220 15% 5%) 0%, hsl(220 15% 3%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(220 15% 10%) 0%, hsl(220 15% 6%) 100%);
     --gradient-hero-overlay: linear-gradient(180deg, rgba(10,10,11,0.4) 0%, rgba(10,10,11,0.9) 70%, rgba(10,10,11,1) 100%);
 
-    /* Shadows */
     --shadow-glow-blue: 0 0 40px hsl(var(--racing-blue) / 0.3);
     --shadow-glow-orange: 0 0 40px hsl(var(--fire-orange) / 0.3);
     --shadow-card: 0 10px 40px -10px rgba(0,0,0,0.5);
 
-    /* Sidebar defaults */
     --sidebar-background: 220 15% 8%;
     --sidebar-foreground: 0 0% 90%;
     --sidebar-primary: 214 100% 50%;
@@ -80,9 +71,7 @@
     --background: 220 15% 5%;
     --foreground: 0 0% 98%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
@@ -102,6 +91,9 @@
   }
 }
 
+/* ----------------------------- */
+/* Components Layer */
+/* ----------------------------- */
 @layer components {
   .hero-gradient { background: var(--gradient-hero-overlay); }
   .glow-blue { box-shadow: var(--shadow-glow-blue); }
@@ -127,6 +119,9 @@
   .link-underline:hover::after { @apply w-full; }
 }
 
+/* ----------------------------- */
+/* Utilities Layer */
+/* ----------------------------- */
 @layer utilities {
   .text-gradient-racing { background: var(--gradient-racing); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .text-gradient-fire { background: var(--gradient-fire); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
