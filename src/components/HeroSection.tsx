@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Gauge, Wrench, Trophy } from 'lucide-react';
 import heroImage from '@/assets/civic-flames.jpg';
@@ -45,16 +46,16 @@ const HeroSection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in animation-delay-300">
             <Button variant="hero" size="xl" asChild>
-              <a href="#contact">
+              <Link to="/contact">
                 <Wrench className="w-5 h-5 mr-2" />
                 Book Your Service
-              </a>
+              </Link>
             </Button>
             <Button variant="outline-racing" size="xl" asChild>
-              <a href="#dyno">
+              <Link to="/dyno-lab">
                 <Gauge className="w-5 h-5 mr-2" />
                 Dyno Tuning
-              </a>
+              </Link>
             </Button>
           </div>
 
@@ -77,13 +78,13 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <a 
-        href="#services" 
+      <Link 
+        to="/services" 
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors animate-fade-in animation-delay-500"
       >
         <span className="text-xs uppercase tracking-widest">Scroll</span>
         <ChevronDown className="w-5 h-5 animate-bounce" />
-      </a>
+      </Link>
     </section>
   );
 };

@@ -1,25 +1,18 @@
+import { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import ServicesSection from '@/components/ServicesSection';
-import DynoSection from '@/components/DynoSection';
-import RacingSection from '@/components/RacingSection';
-import GallerySection from '@/components/GallerySection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  useEffect(() => {
+    document.title = 'Splitfire Auto Repairs | Dyno Tuning Mississauga';
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main>
         <HeroSection />
-        <ServicesSection />
-        <DynoSection />
-        <RacingSection />
-        <GallerySection />
-        <TestimonialsSection />
-        <ContactSection />
       </main>
       <Footer />
     </div>

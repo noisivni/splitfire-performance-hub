@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Youtube, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -28,12 +29,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {['Services', 'Dyno Lab', 'Racing', 'Gallery', 'Contact'].map((link) => (
                 <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase().replace(' ', '-')}`}
+                  <Link
+                    to={`/${link.toLowerCase().replace(' ', '-')}`}
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
