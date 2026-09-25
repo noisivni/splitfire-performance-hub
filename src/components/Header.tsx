@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone } from 'lucide-react';
@@ -15,12 +16,12 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { href: '#services', label: 'Services' },
-    { href: '#dyno', label: 'Dyno Lab' },
-    { href: '#racing', label: 'Racing' },
-    { href: '#gallery', label: 'Gallery' },
-    { href: '#testimonials', label: 'Reviews' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/services', label: 'Services' },
+    { href: '/dyno-lab', label: 'Dyno Lab' },
+    { href: '/racing', label: 'Racing' },
+    { href: '/gallery', label: 'Gallery' },
+    { href: '/reviews', label: 'Reviews' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   return (
@@ -34,7 +35,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-md racing-stripe flex items-center justify-center">
               <span className="font-display font-bold text-primary-foreground text-lg">SF</span>
             </div>
@@ -42,18 +43,18 @@ const Header = () => {
               <span className="font-display font-bold text-lg text-foreground">SPLITFIRE</span>
               <span className="hidden md:inline font-display text-sm text-muted-foreground ml-2">AUTO REPAIRS</span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors link-underline"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -64,7 +65,7 @@ const Header = () => {
               <span>(905) 457-2977</span>
             </a>
             <Button variant="hero" size="lg" asChild className="hidden sm:inline-flex">
-              <a href="#contact">Book Service</a>
+              <Link to="/contact">Book Service</Link>
             </Button>
             
             {/* Mobile Menu Button */}
@@ -83,17 +84,17 @@ const Header = () => {
           <nav className="lg:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <Button variant="hero" size="lg" asChild className="mt-2">
-                <a href="#contact">Book Service</a>
+                <Link to="/contact">Book Service</Link>
               </Button>
             </div>
           </nav>
