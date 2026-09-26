@@ -12,7 +12,7 @@ import engineBuild from '@/assets/engine-build.jpg';
 
 const galleryImages = [
   { src: r32Skyline, alt: 'R32 Skyline GTR in the shop', category: 'Builds' },
-  { src: engineRed, alt: 'Red valve cover Honda engine', category: 'Builds' },
+  { src: engineRed, alt: 'Turbo B18C', category: 'Builds' },
   { src: engineGreen, alt: 'Green Honda engine bay with turbo', category: 'Builds' },
 ];
 
