@@ -5,11 +5,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background border-t border-border py-12">
+    <footer className="bg-background border-t border-border py-10 sm:py-12">
       <div className="container mx-auto px-4">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-10 sm:mb-12">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-md racing-stripe flex items-center justify-center">
                 <span className="font-display font-bold text-primary-foreground text-lg">SF</span>
@@ -88,7 +88,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="section-divider mb-6" />
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {currentYear} Splitfire Auto Repairs. All rights reserved.</p>
           <p>
             Dyno Tuning Mississauga | AWD F2K | Custom Engine Swaps

@@ -25,10 +25,10 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="py-20 lg:py-32 bg-background">
+    <section id="testimonials" className="py-12 sm:py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-6 h-6 fill-fire-orange text-fire-orange" />
@@ -37,13 +37,13 @@ const TestimonialsSection = () => {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             4.6 Star <span className="text-gradient-fire">Google Rating</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground">
             Don't just take our word for it — hear from our customers.
           </p>
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}

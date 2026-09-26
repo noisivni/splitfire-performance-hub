@@ -37,9 +37,9 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-carbon relative">
+    <section id="contact" className="py-12 sm:py-20 lg:py-32 bg-carbon relative">
       <div className="container mx-auto px-4">
-        <form onSubmit={handleSubmit} className="space-y-6 card-gradient rounded-xl p-8">
+        <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6 card-gradient rounded-lg p-5 sm:p-8 max-w-2xl mx-auto">
           <Input name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
           <Input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
           <Input name="phone" type="tel" placeholder="Phone" value={formData.phone} onChange={handleChange} />

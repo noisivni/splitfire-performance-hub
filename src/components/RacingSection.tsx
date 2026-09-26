@@ -21,10 +21,10 @@ const records = [
 
 const RacingSection = () => {
   return (
-    <section id="racing" className="py-20 lg:py-32 bg-background relative">
+    <section id="racing" className="py-12 sm:py-20 lg:py-32 bg-background relative">
       {/* Section Header */}
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span className="inline-flex items-center gap-2 text-sm font-medium text-fire-orange uppercase tracking-widest mb-4">
             <Trophy className="w-4 h-4" />
             Splitfire Racing
@@ -32,41 +32,39 @@ const RacingSection = () => {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Hall of <span className="text-gradient-fire">Fame</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground">
             We don't just build race cars — we build <strong>record breakers</strong>. 
             Our shop cars prove what's possible when passion meets precision.
           </p>
         </div>
 
         {/* Records Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {records.map((record, index) => (
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
+          {records.map((record) => (
             <div
               key={record.car}
-              className="group relative rounded-xl overflow-hidden border border-border bg-card"
+              className="group rounded-lg overflow-hidden border border-border bg-card"
             >
               {/* Image */}
-              <div className="aspect-video overflow-hidden">
+              <div className="aspect-[4/3] sm:aspect-video overflow-hidden">
                 <img
                   src={record.image}
                   alt={record.car}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
+              <div className="p-5 sm:p-6 lg:p-8">
                 {/* Stats Row */}
-                <div className="flex items-center gap-6 mb-4">
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mb-4">
                   <div className="flex items-center gap-2">
-                    <Timer className="w-5 h-5 text-racing-blue" />
-                    <span className="font-display text-2xl font-bold text-racing-blue">{record.time}</span>
+                    <Timer className="w-4 h-4 sm:w-5 sm:h-5 text-racing-blue" />
+                    <span className="font-display text-xl sm:text-2xl font-bold text-racing-blue">{record.time}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Gauge className="w-5 h-5 text-fire-orange" />
-                    <span className="font-display text-2xl font-bold text-fire-orange">{record.speed}</span>
+                    <Gauge className="w-4 h-4 sm:w-5 sm:h-5 text-fire-orange" />
+                    <span className="font-display text-xl sm:text-2xl font-bold text-fire-orange">{record.speed}</span>
                   </div>
                 </div>
 
@@ -81,8 +79,8 @@ const RacingSection = () => {
                 </p>
 
                 {/* Record Badge */}
-                <div className="absolute top-6 right-6 lg:top-8 lg:right-8">
-                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-fire-orange/20 border border-fire-orange/30">
+                <div className="mt-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-fire-orange/20 border border-fire-orange/30">
                     <Trophy className="w-4 h-4 text-fire-orange" />
                     <span className="text-xs font-display font-semibold text-fire-orange uppercase">Record</span>
                   </div>

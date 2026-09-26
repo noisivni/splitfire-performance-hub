@@ -45,17 +45,17 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 lg:py-32 bg-background">
+    <section id="services" className="py-12 sm:py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span className="inline-block text-sm font-medium text-racing-blue uppercase tracking-widest mb-4">
             Our Services
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Honest. Fair. <span className="text-gradient-racing">Family-Trusted.</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground">
             From routine maintenance to complex engine builds, we treat every vehicle 
             with the same precision and care — whether it's your daily commuter or a 
             record-breaking race car.
@@ -63,11 +63,11 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group card-gradient rounded-lg p-6 hover:border-racing-blue/50 transition-all duration-300 hover:-translate-y-1"
+              className="group card-gradient rounded-lg p-5 sm:p-6 hover:border-racing-blue/50 transition-all duration-300 hover:-translate-y-1"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               <div className="w-12 h-12 rounded-lg bg-racing-blue/10 flex items-center justify-center mb-4 group-hover:bg-racing-blue/20 transition-colors">

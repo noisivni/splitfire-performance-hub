@@ -11,9 +11,24 @@ const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMobileMenuOpen(false);
+    };
+    window.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [isMobileMenuOpen]);
 
   const navLinks = [
     { href: '/services', label: 'Services' },
@@ -27,9 +42,9 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-lg'
-          : 'bg-transparent'
+        isMobileMenuOpen || isScrolled
+          ? 'bg-background border-b border-border'
+          : 'bg-background/95 lg:bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
@@ -39,7 +54,7 @@ const Header = () => {
             <div className="w-10 h-10 rounded-md racing-stripe flex items-center justify-center">
               <span className="font-display font-bold text-primary-foreground text-lg">SF</span>
             </div>
-            <div className="hidden sm:block">
+            <div>
               <span className="font-display font-bold text-lg text-foreground">SPLITFIRE</span>
               <span className="hidden md:inline font-display text-sm text-muted-foreground ml-2">AUTO REPAIRS</span>
             </div>
@@ -69,31 +84,35 @@ const Header = () => {
             </Button>
             
             {/* Mobile Menu Button */}
-            <button
+            <Button
+              variant="ghost"
+              size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-foreground"
-              aria-label="Toggle menu"
+              className="lg:hidden text-foreground"
+              aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            </Button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-border animate-fade-in">
-            <div className="flex flex-col gap-4">
+          <nav id="mobile-navigation" className="lg:hidden fixed top-16 left-0 right-0 h-[calc(100dvh-4rem)] overflow-y-auto bg-background border-t border-border px-6 py-6 shadow-lg">
+            <div className="flex flex-col max-w-lg mx-auto">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                  className="text-base font-medium text-foreground hover:text-racing-blue transition-colors py-3 border-b border-border"
                 >
                   {link.label}
                 </Link>
               ))}
-              <Button variant="hero" size="lg" asChild className="mt-2">
+              <Button variant="hero" size="lg" asChild className="mt-6 w-full">
                 <Link to="/contact">Book Service</Link>
               </Button>
             </div>

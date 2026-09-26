@@ -20,24 +20,24 @@ const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   return (
-    <section id="gallery" className="py-20 lg:py-32 bg-carbon">
+    <section id="gallery" className="py-12 sm:py-20 lg:py-32 bg-carbon">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span className="inline-block text-sm font-medium text-racing-blue uppercase tracking-widest mb-4">
             Our Work
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Customer <span className="text-gradient-racing">Builds Gallery</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground">
             From R32 Skylines to turbo-charged Hondas, every build tells a story of 
             passion and precision. Here's a glimpse of what rolls through our shop.
           </p>
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {galleryImages.map((image, index) => (
             <div
               key={index}
