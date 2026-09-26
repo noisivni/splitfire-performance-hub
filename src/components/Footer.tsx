@@ -91,7 +91,7 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© {currentYear} Splitfire Auto Repairs. All rights reserved.</p>
           <p>
-            Dyno Tuning Mississauga | AWD F2K | Custom Engine Swaps
+            Splitfire — the Best & Fastest in the Game
           </p>
         </div>
       </div>
