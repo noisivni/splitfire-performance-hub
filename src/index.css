@@ -43,7 +43,7 @@
     --gradient-fire: linear-gradient(135deg, hsl(var(--fire-orange)) 0%, hsl(var(--fire-orange-glow)) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(220 15% 5%) 0%, hsl(220 15% 3%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(220 15% 10%) 0%, hsl(220 15% 6%) 100%);
-    --gradient-hero-overlay: linear-gradient(180deg, rgba(10,10,11,0.4) 0%, rgba(10,10,11,0.9) 70%, rgba(10,10,11,1) 100%);
+    --gradient-hero-overlay: linear-gradient(180deg, rgba(10,10,11,0.3) 0%, rgba(10,10,11,0.8) 70%, rgba(10,10,11,1) 100%);
 
     --shadow-glow-blue: 0 0 40px hsl(var(--racing-blue) / 0.3);
     --shadow-glow-orange: 0 0 40px hsl(var(--fire-orange) / 0.3);
