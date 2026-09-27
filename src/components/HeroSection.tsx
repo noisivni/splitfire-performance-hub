@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="relative min-h-[calc(100svh-2rem)] flex items-center justify-center overflow-hidden py-24 sm:min-h-screen sm:py-0">
       {/* Background Image with Parallax Effect */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
+        className="absolute inset-0 bg-cover bg-bottom bg-no-repeat scale-110"
         style={{ 
           backgroundImage: `url(${heroImage})`,
           transform: 'scale(1.1)',
