@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, Gauge, Wrench, Trophy } from 'lucide-react';
-import heroImage from '@/assets/civic-flames.jpg';
+import heroImage from '@/assets/civic-flames-hd.jpg';
 
 const HeroSection = () => {
   return (
