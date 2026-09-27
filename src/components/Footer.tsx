@@ -62,7 +62,9 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-foreground mb-4">Follow Us</h4>
             <div className="flex items-center gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/p/Splitfireperformance-and-Tuning-100057649471117/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-racing-blue hover:text-primary-foreground transition-all duration-300"
                 aria-label="Facebook"
               >
